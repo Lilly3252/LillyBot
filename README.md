@@ -1,6 +1,6 @@
+[![GitHub stars](https://img.shields.io/github/stars/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/issues)
 [![GitHub forks](https://img.shields.io/github/forks/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/network)
-[![GitHub stars](https://img.shields.io/github/stars/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/stargazers)
 ![GitHub top language](https://img.shields.io/github/languages/top/Lilly3252/Lillybot)
 # LillyBot
 
