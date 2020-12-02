@@ -22,9 +22,9 @@ module.exports = class extends (
     let Mmember =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
-    if (!Mmember)
+    if (!Mmember){
       return message.channel.send("Please mention a user to be muted!");
-
+    };
     let reason = args.slice(1).join(" ");
     if (!reason) reason = "No reason given";
 
