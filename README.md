@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c6481e29eee147ab95becdb81030f16e)](https://app.codacy.com/gh/Lilly3252/LillyBot?utm_source=github.com&utm_medium=referral&utm_content=Lilly3252/LillyBot&utm_campaign=Badge_Grade)
 [![GitHub stars](https://img.shields.io/github/stars/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/issues)
 [![GitHub forks](https://img.shields.io/github/forks/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/network)
