@@ -9,7 +9,7 @@ module.exports = class extends (
       aliases: ["mute"],
       description: "mute a member.",
       category: "🔔Administrator",
-      usage: `<member> [reason]`,
+      usage: "<member> [reason]",
       userPerms: ["ADMINISTRATOR"] || ["MUTE_MEMBERS"],
       botPerm: ["ADMINISTRATOR"] || ["MUTE_MEMBERS", "MANAGE_ROLES"],
     });
