@@ -12,5 +12,5 @@ module.exports = class extends Command {
   }
   async run(message){
     await discordUNO.endGame(message);
-  };
+  }
 };
