@@ -22,8 +22,8 @@ You can invite Lilly in your server at this provided link:
 * *mute[member] - Mute the mentioned member.
 * *unmute[member] - Unmute the mentioned member.
 * *slowmode[time in seconds] - Set a slowmode inside the channel.
-* ~~*public[roleID][Emoji] - Set the roleID with a emoji, saved into a DB
-* ~~*reaction - Creates a reaction role embed (needs public roles to works)
+* ~~*public[roleID][Emoji] - Set the roleID with a emoji, saved into a DB~~
+* ~~*reaction - Creates a reaction role embed (needs public roles to works)~~
 * *say[ChannelID(optional)][text] - Let lilly say your words!
 * *settings [ ShowSettings | Anti-Raid[true/false] | WelcomeChannel[ChannelID] | ModLog[ChannelID] | ModRole[RoleID] | Prefix[NewPrefix] ] - Add new settings to your server.Saved in a DB
 
