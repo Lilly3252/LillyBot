@@ -1,7 +1,9 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c6481e29eee147ab95becdb81030f16e)](https://app.codacy.com/gh/Lilly3252/LillyBot?utm_source=github.com&utm_medium=referral&utm_content=Lilly3252/LillyBot&utm_campaign=Badge_Grade)
 [![GitHub stars](https://img.shields.io/github/stars/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/issues)
 [![GitHub forks](https://img.shields.io/github/forks/Lilly3252/LillyBot)](https://github.com/Lilly3252/LillyBot/network)
 ![GitHub top language](https://img.shields.io/github/languages/top/Lilly3252/Lillybot)
+
 # LillyBot
 
 Lilly is a multi-tool bot for dealing with your discord server!
@@ -13,11 +15,11 @@ You can invite Lilly in your server at this provided link:
 
  [Click here!](https://discord.com/api/oauth2/authorize?client_id=682776333168017444&permissions=8&redirect_uri=http%3A%2F%2Flocalhost%3A3001%2Fapi%2Fdiscord%2Fredirect&scope=bot)
 
-## Commands!
+## Commands
 
-### Administration Commands!
+### Administration Commands
 
-* *ban[member] - Ban the mentioned member. 
+* *ban[member] - Ban the mentioned member.
 * *kick[member] - Kick the mentioned member.
 * *mute[member] - Mute the mentioned member.
 * *unmute[member] - Unmute the mentioned member.
@@ -27,7 +29,8 @@ You can invite Lilly in your server at this provided link:
 * *say[ChannelID(optional)][text] - Let lilly say your words!
 * *settings [ ShowSettings | Anti-Raid[true/false] | WelcomeChannel[ChannelID] | ModLog[ChannelID] | ModRole[RoleID] | Prefix[NewPrefix] ] - Add new settings to your server.Saved in a DB
 
-### Music Commands!
+### Music Commands
+
 * *play[YT URL] - Play a youtube song for you!
 * *pause - Pause the song.
 * *stop - Stop the song!
@@ -38,21 +41,25 @@ You can invite Lilly in your server at this provided link:
 * *lyrics - Shows the lyrics of the song!
 * *volume[Number] - Change the current volume(blocked at 10)
 
-### Information Commands!
+### Information Commands
+
 * *botinfo - Let Lilly say who she is!
 * *serverinfo - Shows the information of your server.
 * *userinfo[member(optional)] - Show the information of a member
 
-### Fun Commands!
+### Fun Commands
+
 * *battleship[member] - Play a whole game of battleship inside DMs with a opponent
 
 And MORE!
 
-### Utilities Commands!
+### Utilities Commands
+
 * *help[command(optional)] - Let lilly help you!
 * *ping - Pong!
 
 ## Bugs
+
 If you encountered a bug with lilly please , do a issue request at this link : [click here](https://github.com/Lilly3252/LillyBot/issues)
 
 What i need to know:
@@ -62,6 +69,7 @@ What i need to know:
 * What it does? (the error itself)
 
 ## License
-[Apache 2.0](https://choosealicense.com/licenses/apache-2.0/) 
+
+[Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
 
 ##### Copyright 2020 Lilith#3252
