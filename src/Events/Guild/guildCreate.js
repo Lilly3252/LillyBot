@@ -11,17 +11,19 @@ module.exports = class extends Event {
 		});
     }
     run(guild){
-        /*guild = new Guild({
+        const joinedguild = new Guild({
             _id: mongoose.Types.ObjectId(),
             guildID: guild.id,
             guildName: guild.name,
-            prefix: config.prefix
+            prefix: config.prefix,
+            antiRaidMode: false,
+            messageDeleteMode:false,
+            messageUpdateMode:false,
         });
     
-        guild.save()
+        joinedguild.save()
         .then(result => console.log(result))
         .catch(err => console.error(err));
-    */
         console.log('I have joined a new server! Saved to DB.');
     };
     }

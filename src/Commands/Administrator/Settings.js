@@ -10,7 +10,7 @@ module.exports = class extends (
       aliases: ["settings"],
       description: "This command is for setting up your guild.",
       category: "🔔Administrator",
-      usage: "+<ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<Prefix>",
+      usage: "+<ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<Prefix>|<DeleteMessages>|<MessageUpdates>",
       userPerms: ["ADMINISTRATOR"],
     });
   }
@@ -22,7 +22,7 @@ module.exports = class extends (
 
     if (!args[0]) {
       message.channel.send(
-        "You need to tell me at least 1 argument \n <ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<ModRole>|<Prefix>"
+        "You need to tell me at least 1 argument \n <ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<ModRole>|<Prefix>|<DeleteMessages>|<MessageUpdates>"
       );
     }
 
@@ -48,6 +48,12 @@ module.exports = class extends (
           `**❯Anti-raid:** ${
             settings.antiRaidMode ? settings.antiRaidMode : false
           }`,
+          `**❯MessageDelete** ${
+            settings.messageDeleteMode ? settings.messageDeleteMode : false
+          }`,
+          `**❯MessageUpdate:** ${
+            settings.messageUpdateMode ? settings.messageUpdateMode : false
+          }`,
         ])
         .setFooter(
           `Requested by ${message.author.username}`,
@@ -67,6 +73,34 @@ module.exports = class extends (
           antiRaidMode: false,
         });
         message.channel.send("❌ AntiRaid Mode disable.");
+      }
+    }
+    if (args[0] === "MessageUpdates") {
+      if (args[1] === "on") {
+        await settings.updateOne({
+          messageUpdateMode: true,
+        });
+        message.channel.send("✅ MessageUpdate has been enable.");
+      }
+      if (args[1] === "off") {
+        await settings.updateOne({
+          messageUpdateMode: false,
+        });
+        message.channel.send("❌ MessageUpdate has been disable.");
+      }
+    }
+    if (args[0] === "MessageDeletes") {
+      if (args[1] === "on") {
+        await settings.updateOne({
+          messageDeleteMode: true,
+        });
+        message.channel.send("✅ MessageDelete has been enable.");
+      }
+      if (args[1] === "off") {
+        await settings.updateOne({
+          messageDeleteMode: false,
+        });
+        message.channel.send("❌ MessageDelete has been disable.");
       }
     }
     if (args[0] === "WelcomeChannel") {

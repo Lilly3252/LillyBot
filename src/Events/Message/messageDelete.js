@@ -5,11 +5,14 @@ module.exports = class extends (
   Event
 ) {
   async run(message) {
-    if (!message.guild || message.author.bot) return;
+    if (!message.guild) return;
 
     const settings = await Guild.findOne({
       guildID: message.guild.id,
     });
+    if (settings.messageDeleteMode === false) {
+      return;
+    }
 
     const embed = new MessageEmbed()
       .setAuthor(
@@ -37,7 +40,6 @@ module.exports = class extends (
       embed.addField("❯ Embeds", `${message.embeds.length}`);
     }
 
-    embed.addField("Link!!", `[Click here to see the message](${message.url})`, true);
     const channelLogs = message.guild.channels.cache.get(settings.logchannelID);
     if (!channelLogs) return;
     channelLogs.send(embed);
