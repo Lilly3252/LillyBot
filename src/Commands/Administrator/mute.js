@@ -9,7 +9,7 @@ module.exports = class extends (
       aliases: ["mute"],
       description: "mute a member.",
       category: "🔔Administrator",
-      usage: `<member> [reason]`,
+      usage: "<member> [reason]",
       userPerms: ["ADMINISTRATOR"] || ["MUTE_MEMBERS"],
       botPerm: ["ADMINISTRATOR"] || ["MUTE_MEMBERS", "MANAGE_ROLES"],
     });
@@ -22,9 +22,9 @@ module.exports = class extends (
     let Mmember =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
-    if (!Mmember)
+    if (!Mmember){
       return message.channel.send("Please mention a user to be muted!");
-
+    };
     let reason = args.slice(1).join(" ");
     if (!reason) reason = "No reason given";
 

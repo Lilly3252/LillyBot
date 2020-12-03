@@ -9,7 +9,7 @@ module.exports = class extends (
       aliases: ["ban"],
       description: "Ban a member.",
       category: "🔔Administrator",
-      usage: `<member> [reason]`,
+      usage: "<member> [reason]",
       userPerms: ["ADMINISTRATOR"] || ["BAN_MEMBERS"],
       botPerms: ["ADMINISTRATOR"] || ["BAN_MEMBERS"],
     });

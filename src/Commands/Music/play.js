@@ -9,21 +9,22 @@ module.exports = class extends Command {
       category: "🎧Music",
       description:"Play music using a youtube link",
       usage:"<link>",
-      botPerms:['CONNECT','SPEAK']
+      botPerms:["CONNECT","SPEAK"]
     });
   }
 
   // eslint-disable-next-line no-unused-vars
   async run(message, args) {
     const { channel } = message.member.voice;
-    if (!channel)
+    if (!channel){
       return message.channel.send(
         "❌ I'm sorry but you need to be in a voice channel to play music!"
       );
-
+    }
     const validate = await ytdl.validateURL(args[0]);
-    if (!validate) return message.channel.send(`❌ Nuh No! i can't search by words , please enter a proper youtube link. `);
-    
+    if (!validate) {
+      return message.channel.send(`❌ Nuh No! i can't search by words , please enter a proper youtube link. `);
+    }
     const serverQueue = message.client.queue.get(message.guild.id);
 
     const songInfo = await ytdl.getInfo(args[0].replace(/<(.+)>/g, "$1"));

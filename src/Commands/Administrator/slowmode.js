@@ -10,7 +10,7 @@ module.exports = class extends (
       description:
         "Place a slowmode to a channel.If the number is 0, it removes the slowmode.",
       category: "🔔Administrator",
-      usage: `<number(seconds)>`,
+      usage: "<number(seconds)>",
       userPerms : ['ADMINISTRATOR'],
     });
   }

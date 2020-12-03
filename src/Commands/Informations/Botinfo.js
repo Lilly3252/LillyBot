@@ -51,7 +51,7 @@ module.exports = class extends Command {
           process.memoryUsage().heapUsed
         )}`,
       ])
-.addField("Facebook page",`[Click here](https://www.facebook.com/LillyBot-106668441293049/)`,true)
+    .addField("Facebook page",`[Click here](https://www.facebook.com/LillyBot-106668441293049/)`,true)
       .addField("OpenSource Code",`[Click here](https://github.com/Lilly3252/LillyBot)`,true)
       .setTimestamp();
 

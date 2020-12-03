@@ -9,7 +9,7 @@ module.exports = class extends (
       aliases: ["kick"],
       description: "kick a member.",
       category: "🔔Administrator",
-      usage: `<member> [reason]`,
+      usage: "<member> [reason]",
       userPerms: ["ADMINISTRATOR"] || ["KICK_MEMBERS"],
       botPerms: ["ADMINISTRATOR"] || ["KICK_MEMBERS"],
     });
