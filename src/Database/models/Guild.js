@@ -1,4 +1,3 @@
-const { strike } = require("ffmpeg-static");
 const mongoose = require("mongoose");
 
 const guildSchema = mongoose.Schema({
@@ -6,18 +5,12 @@ const guildSchema = mongoose.Schema({
   guildID: String,
   guildName: String,
   prefix: String,
-  moderatorRoleID:String,
-  publicrolesID: {
-    type: Map,
-    of: String,
-  },
-  emojiPublicRoleId: {
-    type: Map,
-    of: String,
-  },
+  moderatorRoleID: String,
   welcomechannelID: String,
   logchannelID: String,
   antiRaidMode: Boolean,
+  messageDeleteMode:Boolean,
+  messageUpdateMode:Boolean,
 });
 
 module.exports = mongoose.model("Guild", guildSchema, "guilds");
