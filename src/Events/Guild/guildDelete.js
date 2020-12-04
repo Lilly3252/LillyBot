@@ -9,13 +9,10 @@ module.exports = class extends Event {
 		});
     }
     run(guild){
-        /*Guild.findOneAndDelete({
+        Guild.findOneAndDelete({
         guildID: guild.id
     }, (err, res) => {
         if(err) console.error(err)*/
         console.log('I have been removed from a server!');
     };
-}
-
-
-
+};

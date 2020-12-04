@@ -19,6 +19,7 @@ You can invite Lilly in your server at this provided link:
 ### Administration Commands!
 
 * *ban[member] - Ban the mentioned member. 
+* *unban[userID] - Unban a user from a guild.
 * *kick[member] - Kick the mentioned member.
 * *mute[member] - Mute the mentioned member.
 * *unmute[member] - Unmute the mentioned member.
@@ -26,7 +27,7 @@ You can invite Lilly in your server at this provided link:
 * ~~*public[roleID][Emoji] - Set the roleID with a emoji, saved into a DB~~
 * ~~*reaction - Creates a reaction role embed (needs public roles to works)~~
 * *say[ChannelID(optional)][text] - Let lilly say your words!
-* *settings [ ShowSettings | Anti-Raid[true/false] | WelcomeChannel[ChannelID] | ModLog[ChannelID] | ModRole[RoleID] | Prefix[NewPrefix] ] - Add new settings to your server.Saved in a DB
+* *settings [ ShowSettings | Anti-Raid[on/off] | MessageDeletes[on/off] | | MessageUpdates[on/off] | WelcomeChannel[ChannelID] | ModLog[ChannelID] | ModRole[RoleID] | Prefix[NewPrefix] ] - Add new settings to your server.Saved in a DB
 
 ### Music Commands!
 * *play[YT URL] - Play a youtube song for you!
