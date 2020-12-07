@@ -7,7 +7,8 @@ const Guild = require("../../Database/models/Guild");
 module.exports = class extends (
   Event
 ) {
-  async run(oldMessage = Message, newMessage = Message) {
+  async run(oldMessage, newMessage) {
+    if(oldMessage.content.includes("https:")){return}
     if (
       !oldMessage.guild ||
       !newMessage.guild ||
@@ -15,15 +16,13 @@ module.exports = class extends (
       newMessage.author.bot
     )
       return;
-if (message.content.includes("https:")){return}
+
     const settings = await Guild.findOne({
       guildID: oldMessage.guild.id,
     });
     if (settings.messageUpdateMode === false) {
       return;
     }
-    if (newMessage) {
-      try {
         const embed = new MessageEmbed()
           .setAuthor(
             `${newMessage.author.tag} (${newMessage.author.id})`,
@@ -89,11 +88,5 @@ if (message.content.includes("https:")){return}
         );
         if (!channelLogs) return;
         channelLogs.send(embed);
-      } finally {
-        if (!newMessage) {
-          return;
-        }
-      }
-    }
   }
 };
