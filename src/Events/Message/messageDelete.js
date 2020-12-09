@@ -7,7 +7,6 @@ module.exports = class extends (
   async run(message) {
     if (!message.guild) return;
     if(message.author === null){return};
-
     const settings = await Guild.findOne({
       guildID: message.guild.id,
     });
