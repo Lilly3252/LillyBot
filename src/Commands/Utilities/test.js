@@ -1,6 +1,6 @@
 const { MessageCollector, MessageEmbed , MessageAttachment } = require("discord.js");
 const Command = require("../../Structures/Command");
-const emoji = require('./../../Structures/emoji.json');
+const emoji = require('./../../Structures/JSONs/emoji.json');
 module.exports = class extends (
   Command
 ) {

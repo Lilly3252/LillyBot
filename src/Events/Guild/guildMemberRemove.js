@@ -1,5 +1,6 @@
 const Event = require("../../Structures/Event.js");
 const { MessageEmbed } = require("discord.js");
+const moment = require("moment");
 const Guild = require("../../Database/models/Guild");
 module.exports = class extends (
   Event
@@ -15,13 +16,9 @@ module.exports = class extends (
     const settings = await Guild.findOne({
         guildID: member.guild.id,
       });
-    const sinceJoinFormatted = moment.utc(member.joinedAt ?? 0).fromNow();
-    const joinFormatted = moment
-      .utc(member.joinedAt ?? 0)
-      .format(DATE_FORMAT_WITH_SECONDS);
-    const leaveFormatted = moment.utc().format(DATE_FORMAT_WITH_SECONDS);
+   
     const embed = new MessageEmbed()
-      .setColor(COLORS.MEMBER_LEFT)
+      .setColor("RANDOM")
       .setAuthor(
         `${member.user.tag} (${member.id})`,
         member.user.displayAvatarURL()

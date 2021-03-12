@@ -24,7 +24,7 @@ module.exports = class extends (
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
     if (!Bmember)
-      return message.channel.send("Please mention a user to be banned!");
+      return message.channel.send("I cannot smash that hammer if you don't tell me who to ban!");
 
     let reason = args.slice(1).join(" ");
     if (!reason) reason = "No reason given";

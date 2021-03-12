@@ -1,5 +1,6 @@
 const Event = require("../../Structures/Event.js");
 const { MessageEmbed } = require("discord.js");
+const moment = require("moment");
 const Guild = require("../../Database/models/Guild.js");
 module.exports = class extends (
   Event
@@ -21,7 +22,7 @@ module.exports = class extends (
       .addField(settings.PersonalizedWelcomeMessage)
       .setFooter("User joined")
       .setTimestamp(new Date());
-      const channelLogs = member.guild.channels.cache.get(welcomeChannel.welcomechannelID);
+      const channelLogs = member.guild.channels.cache.get(WelcomeChannel.welcomechannelID);
     if (!channelLogs) return;
     channelLogs.send(embed);
   }

@@ -8,7 +8,19 @@ module.exports = class extends (
   Event
 ) {
   async run(oldMessage, newMessage) {
-    if(oldMessage.content.includes("https:")){return}
+ if (oldMessage.author === null || newMessage.author === null) {
+      return;
+    }
+    if (oldMessage === null || newMessage === null) {
+      return;
+    }
+    if (oldMessage.content === null || newMessage.content === null) {
+      return;
+    }
+    if (oldMessage.content.includes("https:")) {
+      return;
+    }
+    if(oldMessage.content.includes("https:")|| null){return}
     if (
       !oldMessage.guild ||
       !newMessage.guild ||

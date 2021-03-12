@@ -23,7 +23,7 @@ module.exports = class extends (
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
     if (!Kmember)
-      return message.channel.send("Please mention a user to be kick!");
+      return message.channel.send("Well ... Okay? but who do i kick??");
 
     let reason = args.slice(1).join(" ");
     if (!reason) reason = "No reason given";

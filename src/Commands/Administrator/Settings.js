@@ -22,7 +22,7 @@ module.exports = class extends (
 
     if (!args[0]) {
       message.channel.send(
-        "You need to tell me at least 1 argument \n <ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<ModRole>|<Prefix>|<DeleteMessages>|<MessageUpdates>"
+        "You need to tell me at least 1 argument \n <ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<ModRole>|<Prefix>|<MessageDeletes>|<MessageUpdates>"
       );
     }
 
