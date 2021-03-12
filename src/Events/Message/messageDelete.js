@@ -1,18 +1,20 @@
 const Event = require("../../Structures/Event");
-const { Message, MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const Guild = require("../../Database/models/Guild");
-module.exports = class extends (
-  Event
-) {
+module.exports = class extends Event {
   async run(message) {
-    if (!message.guild) return;
-    if(message.author === null){return};
     const settings = await Guild.findOne({
       guildID: message.guild.id,
     });
-    if (settings.messageDeleteMode === false) {
+    if (settings.messageDeleteMode = false) {
       return;
     }
+    
+    if (!message.guild) return;
+    if (message.author === null) {
+      return;
+    }
+    
 
     const embed = new MessageEmbed()
       .setAuthor(
@@ -39,9 +41,8 @@ module.exports = class extends (
     if (!message.content && message.embeds.length) {
       embed.addField("❯ Embeds", `${message.embeds.length}`);
     }
-
-    const channelLogs = message.guild.channels.cache.get(settings.logchannelID);
-    if (!channelLogs) return;
-    channelLogs.send(embed);
+    const ModeratorChannel = settings.logchannelID
+    if (!ModeratorChannel || ModeratorChannel === null) return;
+    message.client.channels.cache.get(ModeratorChannel).send(embed);
   }
 };

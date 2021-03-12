@@ -16,9 +16,14 @@ module.exports = class extends Event {
             guildID: guild.id,
             guildName: guild.name,
             prefix: config.prefix,
+            moderatorRoleID: null,
+            welcomechannelID: null,
+            logchannelID: null,
             antiRaidMode: false,
-            messageDeleteMode:false,
-            messageUpdateMode:false,
+            messageDeleteMode: false,
+            messageUpdateMode: false,
+            messageBulkDeleteMode: false,
+            PersonalizedWelcomeMessage: null,
         });
     
         joinedguild.save()

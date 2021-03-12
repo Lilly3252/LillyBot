@@ -9,7 +9,7 @@ module.exports = class extends (
       aliases: ["kick"],
       description: "kick a member.",
       category: "🔔Administrator",
-      usage: "<member> [reason]",
+      usage: `<member> [reason]`,
       userPerms: ["ADMINISTRATOR"] || ["KICK_MEMBERS"],
       botPerms: ["ADMINISTRATOR"] || ["KICK_MEMBERS"],
     });
@@ -23,7 +23,7 @@ module.exports = class extends (
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
     if (!Kmember)
-      return message.channel.send("Well ... Okay? but who do i kick??");
+      return message.channel.send("Please mention a user to be kick!");
 
     let reason = args.slice(1).join(" ");
     if (!reason) reason = "No reason given";
@@ -46,8 +46,10 @@ module.exports = class extends (
       .catch((err) => console.log(err));
 
     message.channel.send(`**${Kmember.user.tag}** has been kicked`);
-    const channelLogs = message.guild.channels.cache.get(settings.logchannelID);
-    if (!channelLogs) return;
-    channelLogs.send(embed);
+    const ModeratorChannel = settings.logchannelID
+    if (!ModeratorChannel || ModeratorChannel === null) {
+      return
+    }
+    message.client.channels.cache.get(ModeratorChannel).send(embed);
   }
 };

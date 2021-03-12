@@ -4,9 +4,7 @@ const mongoose = require("mongoose");
 const Guild = require("../../Database/models/Guild");
 const { MessageEmbed } = require("discord.js");
 
-module.exports = class extends (
-  Event
-) {
+module.exports = class extends Event {
   async run(message) {
     if (!message.guild || message.author.bot) return;
     const settings = await Guild.findOne(
@@ -21,6 +19,14 @@ module.exports = class extends (
             guildID: message.guild.id,
             guildName: message.guild.name,
             prefix: config.prefix,
+            moderatorRoleID: null,
+            welcomechannelID: null,
+            logchannelID: null,
+            antiRaidMode: false,
+            messageBulkDeleteMode: false,
+            messageDeleteMode: false,
+            messageUpdateMode: false,
+            PersonalizedWelcomeMessage: null,
           });
 
           newGuild
@@ -37,47 +43,49 @@ module.exports = class extends (
       }
     );
     // Listening mentions
-    //bot mentions
-    if (message.content === `<@!${message.guild.me.id}>`){ 
+    const options = {
+      ignoreEveryone : true
+    }
+    if (message.content === `<@!${message.guild.me.id}>`) {
       message.channel.send(
         `My prefix for ${message.guild.name} is \`${settings.prefix}\`.`
-      )
-    };
-    //creator mentions (me)
-    if (message.mentions.has("165922734461812736")) {
+      );
+    }
+
+    if (message.mentions.has("165922734461812736", options)) {
       message.client.users.cache
         .get("165922734461812736")
         .send(
           `${message.member.user.tag} mentioned your name inside ${settings.guildName}!\n Context: ${message.content}\n<${message.url}>`
         );
-    };
-    //moderator role get through database + message sent to the moderator channel
-    const ModeratorMentionned = settings.moderatorRoleID;
+    }
+
+    const ModeratorMentioned = settings.moderatorRoleID;
     const ModeratorChannel = settings.logchannelID;
-    if (message.mentions.has(ModeratorMentionned)) {
-      message.client.channels.cache
-        .get(ModeratorChannel)
-        .send( new MessageEmbed()
-        .setTitle('Moderator Mentioned')
-        .setThumbnail(message.guild.iconURL({ dynamic: true }))
-        .setDescription([
-          `**Person who mentioned**: ${message.member}`,
-          `**Channel**: ${message.channel}`,
-          `**Content**: ${message.content}`,
-        ])
-        .addField('\u200b',`[Click here to see the message](${message.url})`));
-        if(!ModeratorChannel && !ModeratorMentionned) return;
-    };
+    if (message.mentions.has(ModeratorMentioned, options)) {
+      message.client.channels.cache.get(ModeratorChannel).send(
+        new MessageEmbed()
+          .setTitle("Moderator Mentioned")
+          .setThumbnail(message.guild.iconURL({ dynamic: true }))
+          .setDescription([
+            `**Person who mentioned**: ${message.member}`,
+            `**Channel**: ${message.channel}`,
+            `**Content**: ${message.content}`,
+          ])
+          .addField("\u200b", `[Click here to see the message](${message.url})`)
+      );
+      if (!ModeratorChannel && !ModeratorMentioned) return;
+    }
 
     //normal listening event
+
     const prefix = settings.prefix;
     if (!message.content.startsWith(prefix)) return;
-
     const [cmd, ...args] = message.content
       .slice(prefix.length)
       .trim()
       .split(/ +/g);
-
+     
     const command =
       this.client.commands.get(cmd.toLowerCase()) ||
       this.client.commands.get(this.client.aliases.get(cmd.toLowerCase()));

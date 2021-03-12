@@ -25,7 +25,7 @@ const regions = {
   russia: "Russia",
   singapore: "Singapore",
   southafrica: "South Africa",
-  sydeny: "Sydeny",
+  sydney: "Sydney",
   "us-central": "US Central",
   "us-east": "US East",
   "us-west": "US West",

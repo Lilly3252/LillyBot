@@ -82,7 +82,7 @@ module.exports = class extends Command {
             }
           }
 
-          //add role to the mentioned user and also send the user a dm explaing where and why they were muted
+          //add role to the mentioned user and also send the user a dm explaining where and why they were muted
           Mmember.roles.add(muterole.id).then(() => {
             Mmember.send(
               `Hello, you have been muted in ${message.guild.name} for: ${reason}`
@@ -125,11 +125,11 @@ module.exports = class extends Command {
             `**❯ Time:** ${time}`,
           ])
           .setFooter(`Date: ${message.createdAt.toLocaleString()}`);
-        const channelLogs = message.guild.channels.cache.get(
-          settings.logchannelID
-        );
-        if (!channelLogs) return;
-        channelLogs.send(embed);
+          const ModeratorChannel = settings.logchannelID
+          if (!ModeratorChannel || ModeratorChannel === null) {
+            return
+          }
+          message.client.channels.cache.get(ModeratorChannel).send(embed);
       }
     );
   }

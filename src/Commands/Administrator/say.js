@@ -1,13 +1,15 @@
 const Command = require("../../Structures/Command");
 
-module.exports = class extends Command {
+module.exports = class extends (
+  Command
+) {
   constructor(...args) {
     super(...args, {
       aliases: ["test"],
       category: "🔔Administrator",
-      description:"Echo your message to this channel or to another channel",
-      usage:"[ChannelMention] <message>",
-      userPerms : ['ADMINISTRATOR'] || ['MANAGE_MESSAGES'],
+      description: "Echo your message to this channel or to another channel",
+      usage: "[ChannelMention] <message>",
+      userPerms: ["ADMINISTRATOR"] || ["MANAGE_MESSAGES"],
     });
   }
 

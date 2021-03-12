@@ -1,4 +1,4 @@
-const { BattleShip } = require("../../../Structures/Constants");
+const { BattleShip } = require("../../../Structures/Managers.js");
 
 const Command = require("../../../Structures/Command");
 

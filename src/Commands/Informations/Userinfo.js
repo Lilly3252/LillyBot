@@ -60,7 +60,7 @@ module.exports = class extends Command {
           member.user.createdTimestamp
         ).fromNow()}`,
         `**❯ Status:** ${member.user.presence.status}`,
-        `**❯ Game:** ${member.user.presence.game || "Not playing a game."}`,
+        `**❯ Game:** ${member.user.presence.activities || "Not playing a game."}`,
         `\u200b`,
       ])
       .addField("Member", [

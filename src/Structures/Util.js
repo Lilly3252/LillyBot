@@ -99,7 +99,7 @@ module.exports = class Util {
       .replace(/(^|"|_)(\S)/g, (s) => s.toUpperCase())
       .replace(/_/g, " ")
       .replace(/Guild/g, "Server")
-      .replace(/Use Vad/g, "Use Voice Acitvity");
+      .replace(/Use Vad/g, "Use Voice Activity");
   }
 
   formatArray(array, type = "conjunction") {
@@ -118,7 +118,7 @@ module.exports = class Util {
           throw new TypeError(`Command ${name} doesn't export a class.`);
         const command = new File(this.client, name.toLowerCase());
         if (!(command instanceof Command))
-          throw new TypeError(`Command ${name} doesnt belong in Commands.`);
+          throw new TypeError(`Command ${name} doesn't belong in Commands.`);
         this.client.commands.set(command.name, command);
         if (command.aliases.length) {
           for (const alias of command.aliases) {

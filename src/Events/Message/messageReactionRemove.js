@@ -1,8 +1,8 @@
 const Event = require("../../Structures/Event");
 const { MessageReaction, User } = require("discord.js");
-const ReactionModel = require("../../Database/models/Reactionrole");
 /**
- *
+ *  * TO-DO : do i really need this?
+ * 
  * @param {MessageReaction} reaction
  * @param {User} user
  */

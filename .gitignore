@@ -2,4 +2,6 @@ node_modules
 config.json
 package-lock.json
 package.json
-index.js
+src/Structures/Managers.js
+src/index.js
+Template.txt

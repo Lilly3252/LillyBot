@@ -1,6 +1,6 @@
 const { Client, Collection, Permissions, Intents } = require('discord.js');
 const Util = require('./Util.js');
-
+//const TimerManager = require('./TimerManager')
 
 module.exports = class LillyClient extends Client {
 
@@ -17,7 +17,6 @@ module.exports = class LillyClient extends Client {
         this.queue = new Map()
 		this.utils = new Util(this);
 		this.owners = options.owners;
-		
 	}
 	
 	validate(options) {

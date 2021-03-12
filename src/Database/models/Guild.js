@@ -10,7 +10,9 @@ const guildSchema = mongoose.Schema({
   logchannelID: String,
   antiRaidMode: Boolean,
   messageDeleteMode:Boolean,
+  messageBulkDeleteMode:Boolean,
   messageUpdateMode:Boolean,
+  PersonalizedWelcomeMessage:String
 });
 
 module.exports = mongoose.model("Guild", guildSchema, "guilds");

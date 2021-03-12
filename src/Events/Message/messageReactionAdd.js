@@ -1,7 +1,9 @@
 const Event = require("../../Structures/Event");
 const { MessageReaction, User } = require("discord.js");
-const ReactionModel = require("../../Database/models/Reactionrole");
+
 /**
+ *  * TO-DO : do i really need this?
+ * 
  * @param {MessageReaction} reaction
  * @param {User} user
  */
@@ -14,7 +16,7 @@ module.exports = class extends Event {
         Guild: reaction.message.guild.id,
         Reaction: reaction.emoji.toString(),
         MessageID: reaction.message.id,
-        Role:ReactionModel.schema.obj.ReactionsAndRole.role
+        Role:ReactionModel.schema.obj.ReactionsAndRole.Role
       },
       
       async (err, data) => {

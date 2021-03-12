@@ -93,11 +93,11 @@ module.exports = class extends Command {
             `${Mmember.user.username} was successfully unmuted.`
           );
         });
-        const channelLogs = message.guild.channels.cache.get(
-          settings.logchannelID
-        );
-        if (!channelLogs) return;
-        channelLogs.send(embed);
+        const ModeratorChannel = settings.logchannelID;
+        if (!ModeratorChannel || ModeratorChannel === null) {
+          return;
+        }
+        message.client.channels.cache.get(ModeratorChannel).send(embed);
       }
     );
   }

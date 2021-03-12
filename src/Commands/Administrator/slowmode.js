@@ -10,8 +10,8 @@ module.exports = class extends (
       description:
         "Place a slowmode to a channel.If the number is 0, it removes the slowmode.",
       category: "🔔Administrator",
-      usage: "<number(seconds)>",
-      userPerms : ['ADMINISTRATOR'],
+      usage: `<number(seconds)>`,
+      userPerms: ["ADMINISTRATOR"],
     });
   }
 
@@ -22,7 +22,7 @@ module.exports = class extends (
       .then(() => {
         message.channel.send(
           new MessageEmbed({
-            title: `Set the slowmode to ${args[0]} seconds`,
+            title: `Set the slow mode to ${args[0]} seconds`,
           })
         );
       })

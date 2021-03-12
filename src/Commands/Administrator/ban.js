@@ -9,7 +9,7 @@ module.exports = class extends (
       aliases: ["ban"],
       description: "Ban a member.",
       category: "🔔Administrator",
-      usage: "<member> [reason]",
+      usage: `<member> [reason]`,
       userPerms: ["ADMINISTRATOR"] || ["BAN_MEMBERS"],
       botPerms: ["ADMINISTRATOR"] || ["BAN_MEMBERS"],
     });
@@ -20,13 +20,15 @@ module.exports = class extends (
       guildID: message.guild.id,
     });
 
-    let Bmember =
+    const Bmember =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
-    if (!Bmember)
-      return message.channel.send("I cannot smash that hammer if you don't tell me who to ban!");
+    if (!Bmember) {
+      return message.channel.send("Please mention a user to be banned!");
+    }
 
-    let reason = args.slice(1).join(" ");
+    let reason;
+    reason = args.slice(1).join(" ");
     if (!reason) reason = "No reason given";
 
     let embed = new MessageEmbed()
@@ -47,8 +49,11 @@ module.exports = class extends (
       .catch((err) => console.log(err));
     message.channel.send(`**${Bmember.user.tag}** has been banned`);
 
-    const channelLogs = message.guild.channels.cache.get(settings.logchannelID);
-    if (!channelLogs) return;
-    channelLogs.send(embed);
+    const ModeratorChannel = settings.logchannelID
+    if (!ModeratorChannel || ModeratorChannel === null) {
+      return
+    }
+    message.client.channels.cache.get(ModeratorChannel).send(embed);
+    
   }
 };
