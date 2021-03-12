@@ -47,7 +47,7 @@ You can invite Lilly in your server at this provided link:
 ### Fun Commands!
 * *battleship[member] - Play a whole game of battleship inside DMs with a opponent
 * *8-ball[Question] *NEW* - Ask a question to Lilly and she will respond
-* *axis-cult *NEW* - 
+* *axis-cult *NEW* - .. well..  
 * *bunny *NEW* - Cool fact about bunnies <3
 * *compliment[member] *NEW* - Tell someone how much you like them!
 * *fact-core *NEW* - Lilly knows a lot of stuff
