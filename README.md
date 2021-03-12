@@ -24,8 +24,6 @@ You can invite Lilly in your server at this provided link:
 * *mute[member] - Mute the mentioned member.
 * *unmute[member] - Unmute the mentioned member.
 * *slowmode[time in seconds] - Set a slowmode inside the channel.
-* ~~*public[roleID][Emoji] - Set the roleID with a emoji, saved into a DB~~
-* ~~*reaction - Creates a reaction role embed (needs public roles to works)~~
 * *say[ChannelID(optional)][text] - Let lilly say your words!
 * *settings [ ShowSettings | Anti-Raid[on/off] | MessageDeletes[on/off] | | MessageUpdates[on/off] | WelcomeChannel[ChannelID] | ModLog[ChannelID] | ModRole[RoleID] | Prefix[NewPrefix] ] - Add new settings to your server.Saved in a DB
 
@@ -39,6 +37,7 @@ You can invite Lilly in your server at this provided link:
 * *skipto[Number] - Let lilly skip the song to the number of your choice!
 * *lyrics - Shows the lyrics of the song!
 * *volume[Number] - Change the current volume(blocked at 10)
+* *voicekick[user] *NEW* - Kick a member from a Voice Channel for more privacy ! 
 
 ### Information Commands!
 * *botinfo - Let Lilly say who she is!
@@ -47,8 +46,17 @@ You can invite Lilly in your server at this provided link:
 
 ### Fun Commands!
 * *battleship[member] - Play a whole game of battleship inside DMs with a opponent
-
-And MORE!
+* *8-ball[Question] *NEW* - Ask a question to Lilly and she will respond
+* *axis-cult *NEW* - 
+* *bunny *NEW* - Cool fact about bunnies <3
+* *compliment[member] *NEW* - Tell someone how much you like them!
+* *fact-core *NEW* - Lilly knows a lot of stuff
+* *joke *NEW*- Wanna laugh?
+* *pun *NEW* - close to dad's joke but more funnier
+* *roast[member] *NEW* - Lilly can be mean on this one ..ouch
+* *yo-mama *NEW* - Mama insult !
+ 
+And MORES TO COME!
 
 ### Utilities Commands!
 * *help[command(optional)] - Let lilly help you!
