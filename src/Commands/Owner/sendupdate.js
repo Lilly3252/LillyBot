@@ -10,7 +10,7 @@ module.exports = class extends Command {
   }
 
   // eslint-disable-next-line no-unused-vars
-  async run(message) {
+  async run(message , args) {
     let argsresult;
     let mChannel = message.mentions.channels.first();
 

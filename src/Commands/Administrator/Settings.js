@@ -9,7 +9,7 @@ module.exports = class extends Command {
       description: "This command is for setting up your guild.",
       category: "🔔Administrator",
       usage:
-        "+<ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<ModRole>|<Prefix>|<DeleteMessages>|<messageDeleteBulk>|<MessageUpdates>|<WelcomeMessage>",
+        "+<ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<ModRole>|<Prefix>|<MessageDeletes>|<messageDeleteBulk>|<MessageUpdates>|<WelcomeMessage>",
       userPerms: ["ADMINISTRATOR"],
     });
   }
@@ -21,7 +21,7 @@ module.exports = class extends Command {
 
     if (!args[0]) {
       message.channel.send(
-        "You need to tell me at least 1 argument \n <ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<ModRole>|<Prefix>|<DeleteMessages>|<messageDeleteBulk>|<MessageUpdates>|<WelcomeMessage>"
+        "You need to tell me at least 1 argument \n <ShowSettings>|<Anti-Raid>|<WelcomeChannel>|<ModLog>|<ModRole>|<Prefix>|<MessageDeletes>|<messageDeleteBulk>|<MessageUpdates>|<WelcomeMessage>"
       );
     }
 
