@@ -5,7 +5,7 @@ const client = new LillyClient(config);
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://Lilly-dev:V0TFU0jowTxpIvyd@lillybot.43rtj.mongodb.net/Lilly',{
+mongoose.connect('LINK',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
