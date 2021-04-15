@@ -6,7 +6,7 @@
 # LillyBot
 
 Lilly is a multi-tool bot for dealing with your discord server!
-<img align="right" width="350" height="500" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5d5dbb5-eb1d-4ec6-90ff-f566c3567460/dbzuu10-ddf8765f-a154-4628-a863-9611b917cec0.png/v1/fill/w_1024,h_1449,q_80,strp/lost_pause__lily_fan_art_by_dramelko_dbzuu10-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xNDQ5IiwicGF0aCI6IlwvZlwvZTVkNWRiYjUtZWIxZC00ZWM2LTkwZmYtZjU2NmMzNTY3NDYwXC9kYnp1dTEwLWRkZjg3NjVmLWExNTQtNDYyOC1hODYzLTk2MTFiOTE3Y2VjMC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.x6YoF3JKA02MjXNuxOLSV5qlPHL4ubcoRWmxrCmMVqs">
+<img align="right" width="250" height="350" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5d5dbb5-eb1d-4ec6-90ff-f566c3567460/dbzuu10-ddf8765f-a154-4628-a863-9611b917cec0.png/v1/fill/w_1024,h_1449,q_80,strp/lost_pause__lily_fan_art_by_dramelko_dbzuu10-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xNDQ5IiwicGF0aCI6IlwvZlwvZTVkNWRiYjUtZWIxZC00ZWM2LTkwZmYtZjU2NmMzNTY3NDYwXC9kYnp1dTEwLWRkZjg3NjVmLWExNTQtNDYyOC1hODYzLTk2MTFiOTE3Y2VjMC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.x6YoF3JKA02MjXNuxOLSV5qlPHL4ubcoRWmxrCmMVqs">
 
 
 ## Commands!
@@ -48,8 +48,8 @@ Lilly is a multi-tool bot for dealing with your discord server!
 * *bunny - Cool fact about bunnies <3
 * *compliment[member] *NEW* - Tell someone how much you like them!
 * *fact-core - Lilly knows a lot of stuff
-* *joke *NEW*- Wanna laugh?
-* *pun *NEW* - close to dad's joke but more funnier
+* *joke - Wanna laugh?
+* *pun - close to dad's joke but more funnier
 * *roast[member] - Lilly can be mean on this one ..ouch
 * *yo-mama - Mama insult !
  
