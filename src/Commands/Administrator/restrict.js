@@ -1,6 +1,6 @@
 const Command = require("../../Structures/Command");
 const Guild = require("../../Database/models/Guild");
-const {MessageEmbed} = require("discord.js")
+const { MessageEmbed } = require("discord.js");
 
 module.exports = class extends Command {
   constructor(...args) {
@@ -15,33 +15,31 @@ module.exports = class extends Command {
   }
 
   async run(message, args) {
-    const settings = await Guild.findOne({
-        guildID: message.guild.id,
-      });
+    const settings = await Guild.findOne({ guildID: message.guild.id });
 
     const restrict_action = args[0];
-    
+
     const Rmember =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[1]);
-    
+
     const reason = args.slice(2).join(" ") || "No reason given.";
-    
+
     let embed = new MessageEmbed()
-    .setAuthor(
+      .setAuthor(
         `${message.author.tag} (${message.author.id})`,
         message.author.displayAvatarURL()
       )
-          .setTitle("Restricted!")
-          .setColor("DARK_ORANGE")
-          .addField("Moderation", [
-            `**❯ Action:** ${restrict_action} restriction`,
-            `**❯ Member:** ${Rmember.user.username}`,
-            `**❯ Moderator:** ${message.author.tag} `,
-            `**❯ Reason:** ${reason}`,
-          ])
-          .setTimestamp(new Date())
-          .setFooter(`${restrict_action} restricted`);;
+      .setTitle("Restricted!")
+      .setColor("DARK_ORANGE")
+      .addField("Moderation", [
+        `**❯ Action:** ${restrict_action} restriction`,
+        `**❯ Member:** ${Rmember.user.username}`,
+        `**❯ Moderator:** ${message.author.tag} `,
+        `**❯ Reason:** ${reason}`,
+      ])
+      .setTimestamp(new Date())
+      .setFooter(`${restrict_action} restricted`);
 
     switch (restrict_action) {
       case "embed":
@@ -76,9 +74,7 @@ module.exports = class extends Command {
           );
         });
         break;
-    }
 
-    switch (restrict_action) {
       case "reaction":
         let react_restrict = message.guild.roles.cache.find(
           (r) => r.name === "Reaction Restriction"
@@ -110,9 +106,7 @@ module.exports = class extends Command {
           );
         });
         break;
-    }
 
-    switch (restrict_action) {
       case "voice":
         let voice_restrict = message.guild.roles.cache.find(
           (r) => r.name === "Voice Restriction"
@@ -146,12 +140,18 @@ module.exports = class extends Command {
             `${Rmember.user.username} was successfully restricted.`
           );
         });
+        const { channel } = message.member.voice;
+        if (!Rmember) return message.reply("Well ... Okay? but who??");
+        if (!channel)
+          return message.reply("That user/bot isn't in a voice channel.");
+
+        Rmember.voice.setChannel(null);
         break;
     }
-    const ModeratorChannel = settings.logchannelID
-          if (!ModeratorChannel || ModeratorChannel === null) {
-            return
-          }
-          message.client.channels.cache.get(ModeratorChannel).send(embed);
+    const ModeratorChannel = settings.logchannelID;
+    if (!ModeratorChannel || ModeratorChannel === null) {
+      return;
+    }
+    message.client.channels.cache.get(ModeratorChannel).send(embed);
   }
 };

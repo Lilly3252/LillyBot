@@ -13,12 +13,13 @@ module.exports = class extends Command {
   }
 
   async run(message, args) {
+    const { channel } = message.member.voice;
     const member = message.mentions.members.first();
     if (!member)
       return message.reply(
         "Well ... Okay? but who??"
       );
-    if (!member.voiceChannel)
+    if (!channel)
       return message.reply("That user/bot isn't in a voice channel.");
 
     member.voice.setChannel(null);
