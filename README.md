@@ -8,11 +8,6 @@
 Lilly is a multi-tool bot for dealing with your discord server!
 <img align="right" width="350" height="500" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5d5dbb5-eb1d-4ec6-90ff-f566c3567460/dbzuu10-ddf8765f-a154-4628-a863-9611b917cec0.png/v1/fill/w_1024,h_1449,q_80,strp/lost_pause__lily_fan_art_by_dramelko_dbzuu10-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xNDQ5IiwicGF0aCI6IlwvZlwvZTVkNWRiYjUtZWIxZC00ZWM2LTkwZmYtZjU2NmMzNTY3NDYwXC9kYnp1dTEwLWRkZjg3NjVmLWExNTQtNDYyOC1hODYzLTk2MTFiOTE3Y2VjMC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.x6YoF3JKA02MjXNuxOLSV5qlPHL4ubcoRWmxrCmMVqs">
 
-## Invite
-
-You can invite Lilly in your server at this provided link:
-
- [Click here!](https://discord.com/api/oauth2/authorize?client_id=682776333168017444&permissions=8&redirect_uri=http%3A%2F%2Flocalhost%3A3001%2Fapi%2Fdiscord%2Fredirect&scope=bot)
 
 ## Commands!
 
@@ -21,11 +16,12 @@ You can invite Lilly in your server at this provided link:
 * *ban[member] - Ban the mentioned member. 
 * *unban[userID] - Unban a user from a guild.
 * *kick[member] - Kick the mentioned member.
-* *mute[member] - Mute the mentioned member.
+* *mute[ time(optional) + member] - Mute the mentioned member.
 * *unmute[member] - Unmute the mentioned member.
 * *slowmode[time in seconds] - Set a slowmode inside the channel.
-* *say[ChannelID(optional)][text] - Let lilly say your words!
-* *settings [ ShowSettings | Anti-Raid[on/off] | MessageDeletes[on/off] | | MessageUpdates[on/off] | WelcomeChannel[ChannelID] | ModLog[ChannelID] | ModRole[RoleID] | Prefix[NewPrefix] ] - Add new settings to your server.Saved in a DB
+* *say[ChannelID(optional) + text] - Let lilly say your words!
+* *settings [ ShowSettings | MessageDeletes[on/off] | | MessageUpdates[on/off] | WelcomeChannel[ChannelID] | ModLog[ChannelID] | ModRole[RoleID] | Prefix[NewPrefix] ] - Add new settings to your server.Saved in a DB
+*  *restrict [voice | react | embed] + mention + reason(optional)] - Restrict your guild member to do something.
 
 ### Music Commands!
 * *play[YT URL] - Play a youtube song for you!
@@ -37,24 +33,25 @@ You can invite Lilly in your server at this provided link:
 * *skipto[Number] - Let lilly skip the song to the number of your choice!
 * *lyrics - Shows the lyrics of the song!
 * *volume[Number] - Change the current volume(blocked at 10)
-* *voicekick[user] *NEW* - Kick a member from a Voice Channel for more privacy ! 
+* *voicekick[user] - Kick a member from a Voice Channel for more privacy ! 
 
 ### Information Commands!
 * *botinfo - Let Lilly say who she is!
+* *dev - Get the Invite for the development server.
 * *serverinfo - Shows the information of your server.
 * *userinfo[member(optional)] - Show the information of a member
 
 ### Fun Commands!
 * *battleship[member] - Play a whole game of battleship inside DMs with a opponent
-* *8-ball[Question] *NEW* - Ask a question to Lilly and she will respond
-* *axis-cult *NEW* - .. well..  
-* *bunny *NEW* - Cool fact about bunnies <3
+* *8-ball[Question] - Ask a question to Lilly and she will respond
+* *axis-cult - .. well..  
+* *bunny - Cool fact about bunnies <3
 * *compliment[member] *NEW* - Tell someone how much you like them!
-* *fact-core *NEW* - Lilly knows a lot of stuff
+* *fact-core - Lilly knows a lot of stuff
 * *joke *NEW*- Wanna laugh?
 * *pun *NEW* - close to dad's joke but more funnier
-* *roast[member] *NEW* - Lilly can be mean on this one ..ouch
-* *yo-mama *NEW* - Mama insult !
+* *roast[member] - Lilly can be mean on this one ..ouch
+* *yo-mama - Mama insult !
  
 And MORES TO COME!
 
@@ -74,4 +71,4 @@ What i need to know:
 ## License
 [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/) 
 
-##### Copyright 2020 Lilith#3252
+##### Copyright 2019-2021 Lilith#3252
