@@ -14,7 +14,7 @@ module.exports = class LillyClient extends Client {
 		this.commands = new Collection();
 		this.aliases = new Collection();
 		this.events = new Collection();
-        this.queue = new Map()
+        	this.queue = new Map();
 		this.utils = new Util(this);
 		this.owners = options.owners;
 	}
